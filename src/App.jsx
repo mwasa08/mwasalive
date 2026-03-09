@@ -3,6 +3,10 @@ import VideoPlayer from './components/VideoPlayer';
 import afroLiveLogo from './assets/mwasa.svg';
 import { fetchAndParseM3U } from './services/m3uParser';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
+ 
+
+
 
 const PLAYLIST_URL = 'https://iptv-org.github.io/iptv/index.category.m3u';
 
@@ -15,7 +19,7 @@ const CATEGORY_CARDS = [
   { label: 'Music', terms: ['music', 'radio'] },
 ];
 
-const CHANNEL_LIMIT = 18;
+const CHANNEL_LIMIT = 20;
 
 const buildSearchText = (channel) =>
   `${channel.name} ${channel.group ?? ''} ${channel.country ?? ''}`.toLowerCase();
@@ -205,6 +209,7 @@ function App() {
           </>
         ) : null}
       </section>
+      <Analytics />
     </div>
   );
 }
