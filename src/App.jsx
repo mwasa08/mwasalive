@@ -123,7 +123,7 @@ function App() {
     <div className="app-shell">
       <div className="showcase-frame">
         <section className="brand-panel">
-          <h1 className="brand-title">AFRO LIVE</h1>
+          <h1 className="brand-title">AFRO LIVE TV</h1>
 
           <div className="brand-logo-wrap">
             <img src={afroLiveLogo} alt="Afro Live Africa logo" className="brand-logo" />
